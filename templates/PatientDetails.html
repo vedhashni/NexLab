@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <title>Patient Details</title>
+        <link rel="stylesheet" type="text/css" href="/static/css/style1.css">
+        <a class="MyLogo"><img src="/static/images/NexLogo.png" width="150" height="100"/><span class="MyLogoText"></span></a>
+    </head>
+<body>
+    
+   
+
+    <div class="banner">
+        <h1>PATIENT DETAILS</h1>
+        <br>
+        <div class="patientDetailsalign">
+<form action = "/DisplayPatientDetails" method = "get">   
+    <table class="center">
+        <th>PATIENT ID</th>
+        <th>GENDER</th>
+        <th>AGE</th>
+        <tr></tr>
+{% for key, value in usd[0].items() %}
+  
+        <td> {{ value }} </td>
+
+{% endfor %}
+</table>
+    <br>
+    
+    <br>
+    <h3 style= "font-size: 30px; ">RESULT :</h3>
+   <div class="container">
+    <h3>DIABETES :: {{msg1}}</h3>
+    <img src="/static/images/diabetesprediction.png" width="400" height="260"/>
+       </div>
+    <br>
+    <div class="container">
+    <h3>COPD :: {{msg}} </h3>
+    <img src="/static/images/copdprediction.png" width="400" height="260"/>
+         </div>
+    <br>
+    <div class="container">
+    <h3>HYPERTENSION :: {{msg2}} </h3>
+    <img src="/static/images/hypertensionprediction.png" width="400" height="260"/>
+        </div>
+    <br>
+        <div class="container">
+    <h3>CKD :: {{msg3}} </h3>
+    <img src="/static/images/ckdprediction.png" width="400" height="260"/>
+            </div>
+    <br>
+            <div class="container">
+    <h3>CAD :: {{msg4}} </h3>
+    <img src="/static/images/cadprediction.png" width="400" height="260"/>
+   </div>
+    <br>
+            </form>
+ </div>  
+
+
+        
+        
+         
+         
+         
+       
+
+<br>
+    
+
+        
+</div>
+</body>
+</html>
